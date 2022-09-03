@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY APP</title>
+</head>
+
+
+
+<body>
+    <ul class="quotes">
+        <% for(var i=0; i<Book_Store.length; i++) {%>
+            <li class="quote">
+                <span><%=Book_Store[i].book %> : </span>
+                <span style="color:red"><%= Book_Store[i].Rent%></span>
+            </li>
+            <%}%>
+    </ul>
+</body>
+<script src="main.js"></script>
+
+</html>

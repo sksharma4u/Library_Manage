@@ -1,0 +1,127 @@
+[{
+        "book": "Game of Throne",
+        "category": "Fantasy",
+        "writer": "George R.R. Martin",
+        "Rent": 100
+    },
+    {
+        "book": "The Hitchhiker’s Guide to the Galaxy",
+        "category": "Science Fiction",
+        "writer": "Douglas Adams",
+        "Rent": 50
+    },
+    {
+        "book": "The Handmaid’s Tale",
+        "category": "Adventure",
+        "writer": "Margaret Atwood",
+        "Rent": 40
+    },
+    {
+        "book": "White Fang",
+        "category": "Adventure",
+        "writer": "Jack London",
+        "Rent": 70
+    },
+    {
+        "book": "Overdue Life of Amy Byler",
+        "category": "Romance",
+        "writer": "Kelly Harms",
+        "Rent": 86
+    },
+    {
+        "book": "Murder on the the Orient Express",
+        "category": "Detective & Mystery",
+        "writer": "Agatha Christie",
+        "Rent": 39
+    },
+    {
+        "book": "The Shining",
+        "category": "Horror",
+        "writer": "Stephen King",
+        "Rent": 57
+    },
+    {
+        "book": "The Girl with the Dragon Tattoo",
+        "category": "Thriller ",
+        "writer": "Stieg Larsson",
+        "Rent": 90
+    },
+    {
+        "book": "Simon vs. the Homo Sapiens Agenda",
+        "category": "LGBTQ",
+        "writer": "Becky Albertalli",
+        "Rent": 100
+    },
+    {
+        "book": "The Help",
+        "category": "Historical Fiction",
+        "writer": "Kathryn Stockett",
+        "Rent": 110
+    },
+    {
+        "book": "Game of Throne",
+        "category": "Adventures",
+        "writer": "George R.R. Martin",
+        "Rent": 48
+    },
+    {
+        "book": "Children of Blood and Bone",
+        "category": "Young Adult",
+        "writer": "Tomi Adeyemi",
+        "Rent": 79
+    },
+    {
+        "book": "Serafina and the Black Cloak",
+        "category": "Children’s Fiction",
+        "writer": "Robert Beatty",
+        "Rent": 59
+    },
+    {
+        "book": "Man’s Search for Meaning",
+        "category": "Autobiography",
+        "writer": "Viktor E. Frankl",
+        "Rent": 99
+    },
+    {
+        "book": "Alexander Hamilton",
+        "category": "Biography ",
+        "writer": "Ron Chernow",
+        "Rent": 67
+    },
+    {
+        "book": "Indian Instant Pot Cookbook",
+        "category": "Cooking ",
+        "writer": "Urvashi Pitre",
+        "Rent": 80
+    },
+    {
+        "book": "How to Create Stunning Digital Photography ",
+        "category": "Art & Photography ",
+        "writer": "Tony Northrup",
+        "Rent": 50
+    },
+    {
+        "book": "How to Stop Worrying, Relieve Anxiety",
+        "category": "Personal Development",
+        "writer": "S.J. Scott",
+        "Rent": 80
+    },
+    {
+        "book": "Eliminate Negative Thinking",
+        "category": "Personal Development",
+        "writer": "Barrie Davenport",
+        "Rent": 49
+    },
+    {
+        "book": " The Gifts of Imperfection",
+        "category": "Motivational",
+        "writer": "Brené Brown",
+        "Rent": 40
+    },
+    {
+        "book": "Lies My Doctor Told Me",
+        "category": "Health & Fitness",
+        "writer": "Ken D. Berry",
+        "Rent": 70
+    }
+]
