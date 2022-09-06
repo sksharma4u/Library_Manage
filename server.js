@@ -2,6 +2,7 @@
 //npm install express
 const express = require('express'); //here we create a server with express.js
 
+const bodyParser = require('body-parser')
 
 //2nd Step
 //------------------------------------------------------------------
@@ -20,6 +21,8 @@ const MongoClient = require('mongodb').MongoClient
 
 const app = express(); //This is how I initialize the express
 
+app.use(bodyParser.urlencoded({ extended: true }))
+app.set('view engine', 'ejs')
 console.log(express);
 
 //console.log(app);
@@ -35,7 +38,7 @@ var db;
 
 //Here I  Connect our Database with the MongoClient with the help of Link that provide by the cluster 
 //And by this DataBase I can Easily store the data into the cloud
-MongoClient.connect('mongodb+srv://Sachin:1234@cluster0.ctp9rky.mongodb.net/test', (err, client) => {
+MongoClient.connect('mongodb+srv://sk:1234@cluster0.ctp9rky.mongodb.net/test', (err, client) => {
     if (err)
         return console.log(err);
     //console.log(client);
@@ -59,6 +62,7 @@ MongoClient.connect('mongodb+srv://Sachin:1234@cluster0.ctp9rky.mongodb.net/test
 //  res.send("hii");
 //})
 //-------------------------------------------------------------------------------------------------------------------------------
+
 app.get('/', (req, res) => {
 
     //Now here Collection/table  used to select the table that present into the database ot you can also create with the help of CreateCollection 
@@ -77,5 +81,15 @@ app.get('/', (req, res) => {
 
     //So here we will use Embedded JavaScript i.e (EJS)
     //So install it  by this(npm install ejs --save)
+})
 
+
+app.post('/path', (req, res) => {
+    db.collection('Book_Store').update({}, { $set: { "Choice": req.body.bk1 } }, (err, result) => {
+        if (err)
+            return console.log(err)
+        console.log('saved to database')
+        res.redirect('/')
+        console.log(req.body)
+    })
 })
