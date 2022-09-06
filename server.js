@@ -83,13 +83,16 @@ app.get('/', (req, res) => {
     //So install it  by this(npm install ejs --save)
 })
 
+// STEP 5:
+//-----------------------------------------------------------------------------------------
 
+//In Post method I simply post the choice i.e the data which was selected by the customer(category) and it will post to the server by the name choice;
 app.post('/path', (req, res) => {
-    db.collection('Book_Store').update({}, { $set: { "Choice": req.body.bk1 } }, (err, result) => {
+    db.collection('Book_Store').update({}, { $set: { "Choice": req.body.bk1 } }, (err, result) => { //Here the database is updated on the bases of catergory selection by the  customer
         if (err)
             return console.log(err)
         console.log('saved to database')
-        res.redirect('/')
+        res.redirect('/') //Here I will redirect the path and come back to my home path the is '/'
         console.log(req.body)
     })
 })
