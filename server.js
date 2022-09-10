@@ -38,7 +38,7 @@ var db;
 
 //Here I  Connect our Database with the MongoClient with the help of Link that provide by the cluster 
 //And by this DataBase I can Easily store the data into the cloud
-MongoClient.connect('mongodb+srv://sk:1234@cluster0.ctp9rky.mongodb.net/test', (err, client) => {
+MongoClient.connect('mongodb+srv://s1:1234@cluster0.ctp9rky.mongodb.net/test', (err, client) => {
     if (err)
         return console.log(err);
     //console.log(client);
@@ -88,11 +88,30 @@ app.get('/', (req, res) => {
 
 //In Post method I simply post the choice i.e the data which was selected by the customer(category) and it will post to the server by the name choice;
 app.post('/path', (req, res) => {
-    db.collection('Book_Store').update({}, { $set: { "Choice": req.body.bk1 } }, (err, result) => { //Here the database is updated on the bases of catergory selection by the  customer
+    db.collection('Book_Store').updateMany({}, { $set: { "Choice": req.body.bk1 } }, (err, result) => { //Here the database is updated on the bases of catergory selection by the  customer
         if (err)
             return console.log(err)
-        console.log('saved to database')
+                //console.log('saved to database')
         res.redirect('/') //Here I will redirect the path and come back to my home path the is '/'
-        console.log(req.body)
+            //console.log(req.body)
+    })
+})
+
+app.post('/issue', (req, res) => {
+    db.collection('Book_Store').updateOne({ Code: req.body.Code }, { $set: { "Student-ID": req.body.libid, "status": req.body.status } }, (err, result) => {
+        if (err)
+            return console.log(err);
+        console.log('My second data work');
+        console.log(req.body);
+        res.redirect('/')
+    })
+})
+
+app.get('/path', (req, res) => {
+    db.collection('Book_Strore').find().toArray((err, result) => { // So Here the find method return a Mongo object to results and
+        // the  ToArray Method  convert the given collection into a normal array
+        if (err)
+            return console.log(err);
+        res.render('index.ejs', { Book_Store: result })
     })
 })
